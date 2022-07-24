@@ -7,13 +7,12 @@ FROM gcc:latest
 
 # These commands copy your files into the specified directory in the image
 # and set that as the working location
-COPY . /usr/src/finalproject
-WORKDIR /usr/src/finalproject
+COPY . /app
+WORKDIR /app
 
 # This command compiles your app using GCC, adjust for your source code
-RUN make
+RUN make clean
+RUN make all
 
 # This command runs your application, comment out this line to compile only
-CMD ["./output/main"]
-
-LABEL Name=finalproject Version=0.0.1
+CMD ["/bin/bash"]

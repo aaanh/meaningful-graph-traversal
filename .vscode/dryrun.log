@@ -1,0 +1,14 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/anh/repos/meaningful-graph-traversal'
+mkdir -p output
+ 
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/container.cpp  -o src/container.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/edge.cpp  -o src/edge.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/graph.cpp  -o src/graph.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/main.cpp  -o src/main.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/node.cpp  -o src/node.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -c src/utils.cpp  -o src/utils.o
+g++ -std=c++17 -Wall -Wextra -g -Iinclude -o output/main src/container.o src/edge.o src/graph.o src/main.o src/node.o src/utils.o  -Llib
+echo Executing 'all' complete!
+make: Leaving directory `/Users/anh/repos/meaningful-graph-traversal'
+ 
